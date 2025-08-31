@@ -1,16 +1,36 @@
 # app_http_dummydata
 
-A new Flutter project.
+A new Flutter Full CRUD example project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is designed to show how to use at a simple level a full CRUD system.
 
-A few resources to get you started if this is your first Flutter project:
+It uses dummy data website to retrieve all employees but everything else is done in memory.   This is due to the timeouts of the dummy data website.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Employee List Page
+Select Employee - Employee Details Page
+Edit/Update Employee Details Form
+Add Employee Form
+Slidable Delete with Confirmation on Employee List Page.
+Shows Scaffold Snackbar messaging.
+Refresh button to ReFetch all Employees from Dummy Data website
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+###  Employee List
+<img src="assets/images/EmployeeList.png" width="300">
+
+### Select Employee - Employee Details
+<img src="assets/images/EmployeeDetails.png" width="300">
+
+### Edit Employee Details
+<img src="assets/images/EditEmployeeDetails.png" width="300">
+
+### Add Employee
+<img src="assets/images/AddEmployee.png" width="300">
+
+### Delete Employee
+<img src="assets/images/DeleteEmployee.png" width="300">
+
+### Delete Alert Confirmation
+<img src="assets/images/DeleteAlertConfirmation.png" width="300">
+
