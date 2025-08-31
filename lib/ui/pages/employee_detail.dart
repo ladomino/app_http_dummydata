@@ -1,3 +1,4 @@
+import 'package:app_http_dummydata/ui/pages/employee_form.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:app_http_dummydata/provider_models/employee_model.dart';
@@ -39,11 +40,32 @@ class EmployeeDetailWidgetState extends State<EmployeeDetailWidget> {
   @override
   Widget build(BuildContext context) {
     debugPrint('Building employee details for ID: ${widget.id}');
-    
+    final employeeProvider = context.read<EmployeeProvider>();
+
     return Scaffold(
+
       appBar: AppBar(
         title: const Text('Employee Details'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+         actions: [
+          // Add an edit button to the app bar
+          IconButton(
+            icon: const Icon(Icons.edit),
+            onPressed: () {
+              // Navigate to the employee form page with the current employee ID
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => EmployeeFormWidget(id: widget.id),
+                ),
+              ).then((_) {
+                // Refresh the employee details when returning from the edit form
+                employeeProvider.fetchEmployee(widget.id);
+              });
+            },
+            tooltip: 'Edit Employee',
+          ),
+        ],
       ),
       body: Consumer<EmployeeProvider>(
         builder: (context, provider, child) {
